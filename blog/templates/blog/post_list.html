@@ -10,15 +10,14 @@
 
 		<div>
 			<ul>
+				{% for post in posts %}
 				<li>
-					<em><a href="">First post</a></em> written by admin at 14.06.2014, 12:14
+					
+					<b><a href="">{{post.title}}</a></b> written by <em>{{post.author}}</em> at {{post.published_date}}
+
 				</li>
-				<li>
-					<em><a href="">Second post</a></em> written by admin at 14.06.2014, 12:14
-				</li>
-				<li>
-					<em><a href="">Third post</a></em> written by admin at 14.06.2014, 12:14
-				</li>
+				{% endfor %}
+
 			</ul>
 		</div>
 
