@@ -1,0 +1,23 @@
+.pageheader{
+	background-color: #DCDCDC;
+	margin: 0;
+	padding: 20px 20px 10px 40px;
+	font-family: "Share Tech Mono";
+	color: #324D8C;
+}
+
+.page_content {
+    padding: 15px 15px 15px 15px;
+}
+
+a.title {
+    color: #000000;
+    font-family: "Share Tech Mono";
+}
+
+a.autor {
+    color: "MidnightBlue";
+    font-family: "Courier New";
+    font-size: 16px;
+}
+

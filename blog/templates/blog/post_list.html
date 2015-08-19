@@ -1,26 +1,13 @@
-<HTML>
-	<HEAD>
-		<title>Kpw website</title>
-	</HEAD>
+{% extends "blog/base.html" %}
 
-	<BODY>
-		<div>
-			<h2>List of posts</h2>
-		</div>
+{% block content %}
+	<ul>
+		{% for post in posts %}
+		<li class="post">
+			
+			<b><a class="title" href="{% url "post_detail" pk=post.pk %}">{{post.title}}</a></b> written by  <em><a class="autor" href="">{{post.author}}</a></em>  at {{post.published_date}}
 
-		<div>
-			<ul>
-				{% for post in posts %}
-				<li>
-					
-					<b><a href="">{{post.title}}</a></b> written by <em>{{post.author}}</em> at {{post.published_date}}
-
-				</li>
-				{% endfor %}
-
-			</ul>
-		</div>
-
-	</BODY>
-
-</HTML>
+		</li>
+		{% endfor %}
+	</ul>
+{% endblock content %}
